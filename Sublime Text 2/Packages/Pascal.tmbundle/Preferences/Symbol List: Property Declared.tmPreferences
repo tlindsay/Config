@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Property Declared</string>
+	<key>scope</key>
+	<string>meta.property.declared.pascal</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/^\s*(?i:(property)+)\s+(\w+)\s*:\s*(.*)/      - $2/;</string>
+	</dict>
+	<key>uuid</key>
+	<string>FA40A993-B73A-4E84-B1D4-8B284551E34E</string>
+</dict>
+</plist>

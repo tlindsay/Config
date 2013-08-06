@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>repeat
+	$0
+until ${1:done};</string>
+	<key>name</key>
+	<string>repeat … until</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>repeat</string>
+	<key>uuid</key>
+	<string>D93E02B2-5738-4413-B925-C231AB345AE5</string>
+</dict>
+</plist>

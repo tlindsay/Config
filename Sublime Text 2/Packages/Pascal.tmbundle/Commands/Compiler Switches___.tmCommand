@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	$path = "/Developer/Documentation/Free Pascal Compiler/Compiler Switches.pdf";
+	exec("open -a Safari \"file://$path\"");
+?&gt;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Compiler Switches...</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>5142203D-CF14-4C97-98C9-8F0530988EE3</string>
+</dict>
+</plist>

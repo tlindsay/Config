@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+
+<style type="text/css">
+
+a:hover {
+	font-style: normal;
+	font-weight: bold;
+}
+
+a:link {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:visited {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+p.section {
+	text-shadow: 2px 2px 2px #999999;
+	font-weight: bold;
+	font-size: larger;
+}
+
+p.sub-section {
+	font-weight: bold;
+}
+
+div.chapter {
+	border-color: #7f7f7f;
+	border-style: solid;
+	border-width: 1px;
+	padding: 8px;
+	margin: 20px;
+	overflow: auto;
+	max-height: 500px;
+}
+
+div.sub-chapter {
+	margin-left: 20px;
+}
+
+
+body {
+	font-size: 9pt;
+	font-family: Verdana;
+}
+
+.literal {
+	font-style: italic;
+}
+
+.command {
+	padding-right: 2px;
+	padding-left: 2px;
+	background-color: #e6e6e6;
+	border-color: #cccccc;
+	border-style: solid;
+	border-width: 1px;
+	font-style: italic;
+}
+
+.path {
+	border-bottom-color: #7f7f7f;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	font-style: italic;
+	font-family: monospace;
+}
+
+img.screen {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.note {
+	padding-left: 20px;
+	min-height: 16px;
+	background-repeat: no-repeat;
+	background-image: url(images/note.png);
+	font-size: smaller;
+	color: #666666;
+}
+
+.content {
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.version_history {
+	background-color: #e6e6e6;
+	border-color: #b3b3b3;
+	border-width: 1px;
+	border-style: solid;
+	padding: 2px;
+	font-size: smaller; color: #666666; float: right;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="content">
+
+<span class="version_history"><a href="../Version History.rtf">View History</a></span>
+
+<p><img src="images/icon.png">The <b>Pascal.tmbundle</b> bundle adds syntax support for standard, Object and <a href="http://www.objectivepascal.com">Objective</a> Pascal dialects along with compiler utilities for <a href="http://www.freepascal.org">FPC</a> and <a href="http://www.gnu.org/software/gdb/">GDB</a> terminal support which together make a pretty complete IDE experience. TextMate is a simple yet very powerful editor and when used as an IDE much easier to learn and use than Xcode. Most importantly TextMate is highly extensible so you can control how it works for you.</p>
+
+<p class="section">Table Of Contents</p>
+<ol class="contents">
+	<li><a href="#commands">Commands</a></li>
+	<li><a href="#main-window">Main Window</a></li>
+	<li><a href="#projects">Creating Projects</a></li>
+	<li><a href="#targets">Targets</a></li>
+	<li><a href="#compiling">Compiling & Running</a></li>
+	<li><a href="#function-reference">Function Reference</a></li>
+	<li><a href="#jumping-definition">Jumping to Definition</a></li>
+	<li><a href="#auto-complete">Auto-Complete</a></li>
+	<li><a href="#clean-targets">Cleaning Targets</a></li>
+</ol>
+
+<p class="section"><a name="commands"></a>1) Commands</p>
+<div class="chapter">
+<p>All of the commands available are in the Bundle menu or window sub-menu as seen below. Note that you must have a document open before TextMate will allow you to use any items in the Bundle menu (an unfortunate limitation).</p>
+
+<img src="screens/bundle_menu.png" class="screen">
+
+<p>The window popup menu is located at the bottom of every window next to the source mode.</p>
+
+<img src="screens/bundle_window_menu.png" class="screen">
+
+</div>
+
+
+<p class="section"><a name="main-window"></a>2) Main Window</p>
+<div class="chapter">
+<p>To learn more about how the TextMate editor works with its rich feature set read the <a href="http://manual.macromates.com/en/">TextMate Manual</a> online. Because TextMate is so extensible you can modify the Pascal bundle to meet your needs by extending the syntax definitions, changing command key combinations or adding new snippets for example.</p>
+
+<img src="screens/main_window.png" class="screen">
+</div>
+
+<p class="section"><a name="projects"></a>3) Creating Projects</p>
+<div class="chapter">
+<p>To create a new project select the <span class="literal">New Project...</span> item from the Bundle menu and choose a template location where you want to save.</p>
+
+<p>If you want to translate an existing folder of Pascal source code into a TextMate project choose the <span class="literal">New Project From Existing...</span> item. After choosing the folder to translate the necessary files will be copied into the folder without affecting any of the existing files. You will probably need to change some fields in the target settings so that the compiler can locate your main program file and any additional source directories.</p>
+
+<p>You can add additional project templates by placing them in <span class="path">/Library/Application Support/TextMate/Pascal Project Templates</span>. To learn how to make a project template study the default templates in <span class="path">Pascal.tmbundle/Support/Project Templates</span> as examples.</p>
+</div>
+
+<p class="section"><a name="targets"></a>4) Targets</p>
+<div class="chapter">
+<p>Projects can have an unlimited amount of <i>targets</i> which specify important settings required by the compiler. If you start from a project template everything will be filled in properly and you can just compile and run but often you will need to configure these to fit your projects needs.</p>
+
+<p>The first step to using targets is to set the TextMate project variable <i>TARGET</i> which can be found by clicking the button in the lower right-hand corner of the project window drawer. By default a target named <i>development</i> will exist in all project folders but if you want to choose another target you must make sure an XML definition exists in <span class="path">/path/to/project/Targets</span>. To create a new target simply duplicate the default target and change the file name (there will be a GUI for this eventually).</p>
+
+<img src="screens/project_variables.png" class="screen">
+
+<p class="sub-section">Editing Targets</p>
+<div class="sub-chapter">
+<p>Targets are plain XML files that can be edited by hand or with an editor but the preferred method is to use the <span class="literal">Edit Settings</span> window which can be found in the Bundle menu.</p>
+
+<p>When changing target settings notice there are macros defined by {} characters which will be filled with values from the target when they are applied.</p>
+
+<img src="screens/edit_settings.png" class="screen">
+
+<p class="note">When you are finished making changes you must press the <span class="literal">Save</span> button located in the upper right-hand corner of the window.</p>
+</div>
+
+</div>
+
+
+<p class="section"><a name="compiling"></a>5) Compiling & Running</p>
+<div class="chapter">
+<p>To compile a project choose the <span class="literal">Run</span>, <span class="literal">Build</span> or <span class="literal">Debug</span> item in the Bundle menu. Output from the compiler will be reported within TextMate and errors printed in the console which can be tracked back to source code. </p>
+
+<img src="screens/running.png" class="screen">
+
+<p>After compiling the application will be launched under the Terminal (unless the Build item was selected) where all output can be observed.</p>
+
+<p>If you choose to Debug the application will be launched in the Terminal as well but under GDB as a standard debugging session. To learn more about GDB debugger on the command line visit their official <a href="http://www.gnu.org/software/gdb/">web site</a>. After learning a few basics commands it an be quite useful for most debugging scenarios.</p>
+
+<p class="sub-section">Indexing Symbols</p>
+<div class="sub-chapter">
+<p>After compiling symbols generated in .ppu files by the compiler are parsed and indexed which are the basis for supporting the <i>auto-complete</i> and <i>jump to definition</i> features. For massive files such as MacOSAll.pas, CocoaAll.pas etc... the first pass can be very time consuming but not noticeable for smaller files (there is a notice in the console given when indexing is occurring). Files are only indexed when they are modified so in the case of MacOSAll it will only be indexed once per project.</p>
+
+<p>You can also manually index symbols by pressing <span class="command">command-option-B</span> or by choosing the <span class="literal">Index Symbols</span> item in the Bundle menu.</p>
+</div>
+
+<p class="sub-section">Copying Resources</p>
+<div class="sub-chapter">
+<p>If you specify a resource directory in the target settings files from that directory will be copied into the application bundle and XIB files compiled into NIB (which is required for iPhone applications to run). This process also includes <i>.lproj</i> localized resources directories.</p>
+</div>
+
+</div>
+
+<p class="section"><a name="function-reference"></a>6) Function Reference</p>
+<div class="chapter">
+<p>While typing in the editor you can look up words in the <i>Function Reference</i> by pressing <span class="command">control-H</span> or by choosing the <span class="literal">Look Up in Reference</span> item in the Bundle menu. The word found at the cursor location will be queried and the results returned in a window as seen below.</p>
+
+<img src="screens/function_reference.png" class="screen">
+
+<p class="sub-section"><a name="reference-library-indexer"></a>7) Reference Library Indexer</p>
+<div class="sub-chapter">
+<p>In order to efficiently query the the function reference for symbols Pascal source files must first be indexed using the <span class="literal">Reference Library Indexer</span>. To index the reference library choose the <span class="literal">Index Reference</span> item in the Bundle menu.</p>
+
+<p>By default there are a list of paths which the indexer will use to search for Pascal source files. These standard paths may not be the same on your system and may be required to be changed or the source files on your system moved to match the paths.</p>
+
+<p>If you want to add additional paths for indexing simply add a line to the list then press the <span class="literal">Save</span> button. When you are ready to index the source files found at the specified paths press the <span class="literal">Index</span> button and a spinning wheel appear then a message displayed when completed. Please note this may take a while depending on how many paths you specified and the speed of your Mac.</p>
+
+<img src="screens/reference_library_indexer.png" class="screen">
+
+</div>
+
+</div>
+
+<p class="section"><a name="jumping-definition"></a>8) Jumping to Definition</p>
+<div class="chapter">
+<p>After a projects symbols have been indexed you can jump to a words symbol definition by pressing <span class="command">command-G</span> or choosing the <span class="literal">Jump to definition</span> item in the Bundle menu. The word at the cursor location will be used for the query and if successfully the line will be selected in the file it was defined.</p>
+
+<p>For this feature to work you must have a path in the target settings which the source file can be found at. Unlike the compiler however these paths are recursive and will search an unlimited number of directories below the specified source path. For this reason you must be careful to not specify directories that are too deep as it could cause performance issues when jumping to definitions.</p>
+
+<p>Currently, if there are duplicate symbol entries for the selected word only the first will be displayed.</p>
+
+</div>
+
+<p class="section"><a name="auto-complete"></a>9) Auto-Complete</p>
+<div class="chapter">
+<p>After a projects symbols have been indexed the they will appear in the auto-complete list which can be invoked by pressing the <span class="command">~</span> button when the cursor is over a word you want to show completions for.</p>
+
+<img src="screens/auto_complete.png" class="screen">
+
+</div>
+
+<p class="section"><a name="clean-targets"></a>10) Cleaning Targets</p>
+<div class="chapter">
+<p>If you need to delete the build directory created by the compiler and other supporting files (like symbol tables) choose the <span class="literal">Clean Target</span> item in the Bundle menu. Only the build directory for the currently active target will be deleted.</p>
+</div>
+
+<span style="font-size: smaller; color: #666666; float: right;">&copy; 2010 Ryan Joseph.</span>
+<br>
+
+</div>
+
+</body>
+</html>

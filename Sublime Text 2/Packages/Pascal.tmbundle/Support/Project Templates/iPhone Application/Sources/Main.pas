@@ -1,0 +1,1 @@
+{$H+}{$modeswitch objectivec1}program HelloWorld;uses  SysUtils, iPhoneAll, AppDelegate;var  pool: NSAutoreleasePool;  retVal: Integer;begin  pool := NSAutoreleasePool(NSAutoreleasePool.alloc).init;  retVal := UIApplicationMain(argc, argv, nil, nil);  pool.release;	  ExitCode := retVal;end.

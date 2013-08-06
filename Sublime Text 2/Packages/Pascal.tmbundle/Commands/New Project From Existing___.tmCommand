@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	// Give PHP version error
+	if (phpversion() &lt; 5.0) die("This bundle requires PHP 5.0 or higher (you have version ".phpversion()." installed).");	
+
+	require_once($_ENV["TM_BUNDLE_SUPPORT"]."/project_manager.php");
+
+	$project = new ProjectManager($_ENV["TM_SUPPORT_PATH"]."/bin/CocoaDialog.app", $_ENV["TM_BUNDLE_SUPPORT"]."/Project Templates");
+
+	$project-&gt;create_existing();
+?&gt;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>New Project From Existing...</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>783D8A53-EAA3-4CF8-A3BE-1F8579B8951D</string>
+</dict>
+</plist>

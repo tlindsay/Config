@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	require_once($_ENV['TM_BUNDLE_SUPPORT']."/common.php");
+	require_once($_ENV['TM_BUNDLE_SUPPORT']."/preferences.php");
+
+	$docset = $preferences-&gt;get_string_value("docset");
+	$support_path = expand_tilde_path("~/Library/tmpascal"); 
+	$current_word = $_ENV['TM_CURRENT_WORD'];
+	
+	@mkdir($support_path);
+
+	$GLOBALS["argv"][] = "-docset=\"$docset\"";
+	$GLOBALS["argv"][] = "-out=\"$support_path/tmdocsets.json\"";
+	$GLOBALS["argv"][] = "-query=\"$current_word\"";
+
+	require($_ENV['TM_BUNDLE_SUPPORT']."/docsets.php");
+?&gt;
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
+	<key>name</key>
+	<string>Documention For Word</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>623CB24D-07F0-46C5-A3E1-F18A245FF0A3</string>
+</dict>
+</plist>

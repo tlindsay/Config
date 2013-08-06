@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!-- User defined target settings -->
+<target>
+	<compiler>/usr/local/lib/fpc/2.5.1/{compiler}</compiler>
+	<program>{project}/Sources/Main.pas</program>
+	<output>{project}/build.{platform}</output>
+	
+	<!-- Path of the application bundle (if applicable) -->
+	<bundle>{project}/iPhone Application.app</bundle>
+	
+	<!-- Directory inside <bundle> where the compiled binary is copied -->
+	<binary></binary>
+	
+	<!-- Path of the resources directory which resources will be copied from into the bundle -->
+	<resources>{project}/Resources</resources>
+
+	<!-- Compiler platform target -->
+	<platform>
+		<ppc>off</ppc>
+		<i386>off</i386>
+		<iphone_simulator>on</iphone_simulator>
+		<iphone_device>off</iphone_device>
+		<universal>off</universal>
+	</platform>
+	
+	<!-- Platform specific developer SDK's -->
+	<sdks>
+		<iphone_simulator>/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk</iphone_simulator>
+		<iphone_device>/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk</iphone_device>
+		<universal>/Developer/SDKs/MacOSX10.5.sdk</universal>
+	</sdks>
+	
+	<!-- User defined framework paths 
+	<frameworks>
+		<framework></framework>
+	</frameworks>
+	-->
+	
+	<!-- User defined source file paths -->
+	<paths>
+		<path>{project}/Sources</path>
+		<path>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src</path>
+		<path>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src/foundation</path>
+		<path>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src/uikit</path>
+	</paths>
+	
+	<symbols>
+		<symbol>{project}/Sources</symbol>
+		<symbol>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src</symbol>
+		<symbol>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src/foundation</symbol>
+		<symbol>/Developer/ObjectivePascal/fpc/packages/cocoaint/utils/uikit-skel/src/uikit</symbol>
+	</symbols>
+	
+	<!-- Direct command line options to FPC -->
+	<options>
+		<option>-FD/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin</option>
+	</options>
+	
+	<advanced_index_symbols>1</advanced_index_symbols>
+	<advanced_resolve_paths_recursively>0</advanced_resolve_paths_recursively>
+	<advanced_debugging>-gw -Xg</advanced_debugging>
+	<advanced_show_fpc_command>1</advanced_show_fpc_command>
+	<xcode_active_configuration>Debug</xcode_active_configuration>
+	<xcode_project>{project}/Xcode/{bundle-name}</xcode_project>
+	<debugger_breakpoints></debugger_breakpoints>
+	
+</target>

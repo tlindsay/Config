@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Class Method Declared</string>
+	<key>scope</key>
+	<string>meta.method.class.declared.pascal</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/^\s*(?i:(class))\s*\b(?i:(function|procedure|constructor|destructor))\b\s+(\w+)/      + $3/;	# method name
+</string>
+	</dict>
+	<key>uuid</key>
+	<string>995A5805-061E-4B75-A7A6-697F4E41397C</string>
+</dict>
+</plist>

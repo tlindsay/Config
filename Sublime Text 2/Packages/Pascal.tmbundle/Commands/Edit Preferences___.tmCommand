@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	// Give PHP version error
+	if (phpversion() &lt; 5.0) die("This bundle requires PHP 5.0 or higher (you have version ".phpversion()." installed).");	
+
+	require_once($_ENV["TM_BUNDLE_SUPPORT"]."/preference_editor.php");
+?&gt;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>~@;</string>
+	<key>name</key>
+	<string>Edit Preferences...</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>6960A120-A131-4334-B8A4-5792B8E9221F</string>
+</dict>
+</plist>

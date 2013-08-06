@@ -1,0 +1,67 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf350
+{\fonttbl\f0\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww11880\viewh12340\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+\'95 1.3 (4/26/11)\
+	- NEW: The old function reference has been removed and replaced with "Documentation for Word" command which parses .docsets and finds methods, functions, classes in the Objective-C reference HTML. Currently the docset used is /Library/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset which doesn't contain 32-bit Carbon frameworks (such as HIView, WindowManager etc\'85). This can be changed in the preferences however.\
+	- NEW: You can toggle the breakpoint at the current line by using command-option-B (see the Utilities menu in the Pascal bundle for the command).\
+	- NEW: If you run stand alone program files that are not part of a TextMate project they will compile (and launch in Terminal.app) using options taken from the first // commented line in the program (example first line: ///usr/local/lib/fpc/2.5.1/ppc386 -Tdarwin -Fu"/Developer/ObjectivePascal/units").\
+	- NEW: There is a new global preferences (for all Pascal source files) that controls some value which were previously fixed in code.\
+	- NEW: Added some templates for new files.\
+	- NEW: Class browser has been added for navigating the entire projects class structure. This feature relies on the symbol parser and has some preferences available in the preferences. There is also a "Inspect Word as Class" command which opens the current word at the cursor in the class browser.\
+	- NEW: There is a new symbol browser which lets you browser all symbols in the project (after they're indexed) and filter by type.\
+	- NEW: iOS device targets which require an Xcode helper project (tested with Xcode 3 only).\
+\
+	- IMPROVED: The symbol completion uses a new method to generate the list which is at least 2-3X faster and doesn't need to produce the large symbol table file during compiling like before.\
+	- IMPROVED: Compiling is handled more in the background by returning control to the editor immediately after opening the compile window and showing a popup window for the first error (open in the preferences).\
+	- IMPROVED: Jump to definition window looks better and resizes to fit the text/centers on screen. Arrow movement is improved also.\
+	\
+	- FIXED: The syntax parser works with the new definition of external objcclass.\
+\
+\'95 1.2 (12/30/10)\
+	- IMPROVED: The reference indexer now indexes all symbols properly and warns before attempting to index with invalid paths.\
+	- IMPROVED: Jump to Definition now uses a popup window for multiple definitions that can be controlled via the keyboard with up/down keys then hitting return or with the mouse. The interface still needs work and the symbol parser will eventually need to parse source files instead of PPU's to get all duplicate name symbols in the project.\
+	- NEW: The console now jumps to the first error after compiling so you don't need to manually click it.\
+	- NEW: Added some more standard snippets.\
+	- NEW: Added properties to the language syntax.\
+	- IMPROVED: Various improvements to the syntax definitions.\
+	- IMPROVED: Class methods are now displayed properly in the symbol list and are prefixed with +.\
+	- NEW: Comments in class declarations appear in the symbol menu around [] characters to represent sections.\
+	- IMPROVED: The PPU parser for collecting project symbols has been removed (due to the .ppu files being unreliable) and replaced in favor of a native Pascal syntax parser. This means more symbols will be available but there are still some bugs to be worked out.\
+	- NEW: Added "Open Project Folder" (option-shift-P) will open the project folder in the Finder.\
+	- NEW: There is a MAC_SYSTEM_VERSION macro which is defined.\
+	- IMPROVED: Jump to definition is faster at querying as a result of smaller symbol files.\
+	- NEW: More advanced options in the settings for showing the FPC command, indexing symbols and recursive resolving of paths.\
+	- IMPROVED: Console issues a warning if target paths can not be located.\
+\
+\'95 1.1 (10/2/10):\
+	- The console is now more like PascalGladiator.\
+	- Very useful control-D command will "Jump to Method Implementation" which will take the method class declaration at the current line and find its implementation in the current file.\
+	- Inherited Method (control-i) command which will insert an inherited method \
+	- Added a "Documentation" item in the bundle menu which will open FPC .pdf documentation in Preview (located at /Developer/Documentation/Free Pascal Compiler as per the standard install location)\
+	- Break points can be assigned to source by adding "//break" to a line (anywhere is ok). When debugging the source files will be searched for the line (at all target paths) and added the GDB command line. There's a also a "Breakpoints\'85" bundle item which shows all the break points in the project.\
+\
+	- When debugging a separate build folder will be created named "debug" inside the main build folder so you don't have to clean targets between changing compile modes.\
+	- Added a tabs bar to the project settings to make it shorter.\
+	- Jump to symbol no longer searches recursively as it can just take too long depending on your source directories.\
+	- The function reference is now being stored in the user version instead of the base version of the bundle (which helps during updating).\
+	- Running, building and debugging now save all files in the project also.\
+	- Control-T now brings the Terminal to the front.\
+	- There's a "Launch Bundle" item in the bundle menu which will open the application bundle (outside of the terminal for now).\
+	- Tab c and b comment snippets for formatted \{\} comments and a bookmark comment which will appear in the symbol list.\
+	- Command-shift-* snippet will wrap the selection in (* *) style comments\
+\
+\'95 1.0.1 (9/25/10):\
+	- The entire bundle was broken when installed on other systems but that's fixed now.\
+	- Fixed bug in PHP that made it crash on versions lower than 5.3.0\
+	- Binaries are now copied into bundles with the same name of the bundle instead of the name from the main program file.\
+	- The syntax styling is improved and more complete in general.\
+	- Paths in the console leading to errors are resolved properly against the target setting macros (like \{project\}).\
+	- The jump to definition command has been changed to "command-D" so it doesn't conflict with Find & Replace.\
+	- Resolved file name paths in the console are cached so errors appear faster.\
+	- Released a new PascalGladiator theme which makes TextMate look like PascalGladiator.\
+\
+\'95 1.0 (9/21/10) First release!}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	// Give PHP version error
+	if (phpversion() &lt; 5.0) die("This bundle requires PHP 5.0 or higher (you have version ".phpversion()." installed).");	
+
+	if (!isset($_ENV["TARGET"])) die("Set the project TARGET before compiling.");
+
+	require($_ENV["TM_BUNDLE_SUPPORT"]."/jump_to_definition.php");
+?&gt;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@d</string>
+	<key>name</key>
+	<string>Jump to Definition</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>24E8FCAE-8F1E-4385-9E37-63943CEC557F</string>
+</dict>
+</plist>

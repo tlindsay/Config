@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Class</string>
+	<key>scope</key>
+	<string>meta.class.definition.pascal</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/=\s*(class|object|objcclass|objccategory|objcprotocol|interface)\s*(external)*\s*(\((.*)\))*//;			# class names
+		s/^\s*//;				# spaces from start of word
+		s/(\w+)/  • $1/;		# class names
+
+</string>
+	</dict>
+	<key>uuid</key>
+	<string>EAB97717-A2DF-44E8-A7F5-9D261361AF1C</string>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Implementation</string>
+	<key>scope</key>
+	<string>entity.name.function.implementation.pascal</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<integer>1</integer>
+		<key>symbolTransformation</key>
+		<string>
+		s/(\w+)/=== IMPLEMENTATION ===/;	
+
+</string>
+	</dict>
+	<key>uuid</key>
+	<string>1C93ED15-5456-4F8D-A81A-B18550D5502D</string>
+</dict>
+</plist>

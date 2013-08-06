@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>type
+	${1:MyRecord} = record
+		${0}
+	end;</string>
+	<key>name</key>
+	<string>record … end</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>rec</string>
+	<key>uuid</key>
+	<string>33F200B9-2023-4762-8DA0-B8773B60A248</string>
+</dict>
+</plist>

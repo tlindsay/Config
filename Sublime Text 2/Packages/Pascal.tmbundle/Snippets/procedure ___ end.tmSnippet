@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>procedure ${1:MyProcedure}; 
+begin
+	$0
+end;</string>
+	<key>name</key>
+	<string>procedure ... end</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>proc</string>
+	<key>uuid</key>
+	<string>A3789968-571C-41A7-BE89-7FCA7C3B1B26</string>
+</dict>
+</plist>

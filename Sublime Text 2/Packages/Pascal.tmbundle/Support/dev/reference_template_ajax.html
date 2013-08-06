@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+<style type="text/css">
+
+p.caption {
+	font-weight: bold;
+	font-size: 11pt;
+	font-family: sans-serif;
+}
+
+div.container {
+	width: 100%;
+	height: 100%;
+}
+
+a:hover {
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-color: blue;
+	border-bottom-width: 1px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+a:link {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:visited {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#preview {
+	max-width: 500px;
+	max-height: 400px;
+	padding: 8px;
+	border-color: #7f7f7f;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 7pt;
+	font-family: monospace;
+	height: 400px;
+	width: 500px;
+	overflow: scroll;
+}
+
+.selection {
+	border-color: #7f7f7f;
+	border-bottom-width: 1px;
+	border-style: solid;
+	border-top-width: 1px;
+	padding: 2px;
+	background-color: #cccccc;
+}
+
+.results {
+	min-height: 300px;
+	max-height: 400px;
+	padding: 8px;
+	border-color: #7f7f7f;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 7pt;
+	font-family: monospace;
+	height: 100%;
+	width: 260px;
+	overflow: scroll;
+}
+
+</style>
+
+<script type="text/javascript">
+
+function displayPreview (command, line) {
+	var output = TextMate.system(command, null).outputString;
+	
+	// Set the preview DIV with the result from the Pascal Text Formatter
+	document.getElementById('preview').innerHTML = output;
+	
+	// Goto the line requested
+	document.location.href = '#'+line;
+}
+
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+<table border="1">
+	<tr><td><p class="caption">Results</a></td><td><p class="caption">Preview</a></td></tr>
+	<tr><td valign="top"><div class="results">[RESULTS]</div></td><td valign="top"><div id="preview"></div></td></tr>
+</table>
+
+</div>
+
+</body>
+</html>

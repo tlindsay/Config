@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+
+<style type="text/css">
+p.caption {
+	font-weight: bold;
+	font-size: 11pt;
+	font-family: sans-serif;
+}
+
+div.container {
+	width: 100%;
+	height: 100%;
+}
+
+a:hover {
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-top-width: 0px;
+	border-color: blue;
+	border-bottom-width: 1px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+a:link {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+a:visited {
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.results {
+	padding: 8px;
+	font-size: 9pt;
+	margin-left: 20px;
+	font-family: monospace;
+	height: 100%;
+	width: 100%;
+}
+
+.function {
+	font-weight: bold;
+	margin-left: 0px;
+	padding:0px;
+}
+
+.file {
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: double;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.source {
+	font-size: 7pt;
+}
+
+li.row_on {
+	background-color: #66ccff;
+}
+
+</style>
+
+<script src="file://[TM_BUNDLE_SUPPORT]/TJK_ToggleDL/TJK_ToggleDL.js" type="text/javascript" charset="utf-8"></script>
+<link href="file://[TM_BUNDLE_SUPPORT]/TJK_ToggleDL/TJK_ToggleDL.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body onload="TJK_ToggleDL('file://[TM_BUNDLE_SUPPORT]')">
+
+<div class="container">
+<p class="caption">Found [RESULT_COUNT] results in [FILE_COUNT] files.</p>
+<a id="TJK_ToggleON">Show All</a><a id="TJK_ToggleOFF">Hide All</a>
+
+<div class="results">[RESULTS]</div>
+
+</div>
+
+</body>
+</html>

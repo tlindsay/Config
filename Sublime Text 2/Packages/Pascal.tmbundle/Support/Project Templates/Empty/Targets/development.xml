@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- User defined target settings -->
+<target>
+	<compiler>/usr/local/lib/fpc/2.5.1/{compiler}</compiler>
+	<program>{project}/Sources/Main.pas</program>
+	<output>{project}/build.{platform}</output>
+	
+	<!-- Path of the application bundle (if applicable) -->
+	<bundle>{project}/Application.app</bundle>
+	
+	<!-- Directory inside <bundle> where the compiled binary is copied -->
+	<binary>/Contents/MacOS</binary>
+	
+	<!-- Path of the resources directory which resources will be copied from into the bundle -->
+	<resources>{project}/Resources</resources>
+
+	<!-- Compiler platform target -->
+	<platform>
+		<ppc>off</ppc>
+		<i386>on</i386>
+		<iphone_simulator>off</iphone_simulator>
+		<iphone_device>off</iphone_device>
+		<universal>off</universal>
+	</platform>
+	
+	<!-- Platform specific developer SDK's -->
+	<sdks>
+		<iphone_simulator>/Developer/Platforms/iPhoneSimulator.platform</iphone_simulator>
+		<iphone_device>/Developer/Platforms/iPhoneOS.platform</iphone_device>
+		<universal>/Developer/SDKs/MacOSX10.5.sdk</universal>
+	</sdks>
+	
+	<!-- User defined framework paths 
+	<frameworks>
+		<framework></framework>
+	</frameworks>
+	-->
+	
+	<!-- User defined source file paths -->
+	<paths>
+		<path>{project}/Sources</path>
+	</paths>
+	
+	<!-- Direct command line options to FPC -->
+	<options>
+	</options>
+</target>

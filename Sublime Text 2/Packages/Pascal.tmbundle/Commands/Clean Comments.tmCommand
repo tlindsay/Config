@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	require($_ENV["TM_BUNDLE_SUPPORT"]."/Utilities/clean_comments.php");
+?&gt;</string>
+	<key>input</key>
+	<string>document</string>
+	<key>name</key>
+	<string>Clean Comments</string>
+	<key>output</key>
+	<string>replaceDocument</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>7BEE0606-35F2-433C-8B67-4213D2B6C2B7</string>
+</dict>
+</plist>

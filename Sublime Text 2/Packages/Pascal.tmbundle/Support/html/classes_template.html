@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+
+<!-- Common Styles -->
+<link href="file://[TM_BUNDLE_SUPPORT]/css/main.css" type="text/css" rel="stylesheet" media="screen"/>
+<link href="file://[TM_BUNDLE_SUPPORT]/css/gui.css" type="text/css" rel="stylesheet" media="screen"/>
+
+<script src="file://[TM_BUNDLE_SUPPORT]/form.js" type="text/javascript" charset="utf-8"></script>
+<script src="file://[TM_BUNDLE_SUPPORT]/PopupAlert/popup_alert.js" type="text/javascript" charset="utf-8"></script>
+<link href="file://[TM_BUNDLE_SUPPORT]/PopupAlert/styles.css" type="text/css" rel="stylesheet" />
+
+<!-- jquery tree -->
+<script type="text/javascript" src="file://[TM_BUNDLE_SUPPORT]/jquery-tree/jquery.min.js"></script>
+<script type="text/javascript" src="file://[TM_BUNDLE_SUPPORT]/jquery-tree/jquery.cookie.js"></script>
+<script type="text/javascript" src="file://[TM_BUNDLE_SUPPORT]/jquery-tree/jquery.tree.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('ul.tree').tree({default_expanded_paths_string : ''});
+  });
+</script>
+
+<style type="text/css">
+body {
+	font-family: sans-serif;
+	padding: 8px;
+	font-size: 8pt;
+	height: 100%;
+	width: 100%;
+}
+
+ul {
+}
+
+li.parent {
+	border-left-color: #4c4c4c;
+	border-right-width: 0px;
+	border-left-style: dashed;
+	border-bottom-width: 0px;
+	border-top-width: 0px;
+	border-left-width: 1px;
+	font-weight: bold;
+}
+
+li {
+	padding: 2px;
+	overflow: hidden;
+}
+
+a.parent {
+	padding: 1px;
+	border-color: #999999;
+	border-width: 1px;
+	border-style: inset;
+	background-color: #e6e6e6;
+	font-weight: bold;
+}
+
+ul.tree {
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- PopupAlert -->	
+<div id="alert-background">
+	<div id="alert-box" onclick="hide_alert();">
+		<p id="alert-message"></p>
+	</div>
+</div>
+
+<div class="toolbar">
+	<p class="title">Class Browser</p>
+	<form>
+		<input style="float:right; margin-right:16px" type="text" size="20" name="filter">
+		<input style="float:right" type="submit" value="Save" class="button" onclick="reload('<?php echo $script_path; ?>');"/>
+	</form>
+</div>
+
+<br><br><br>
+
+<div>
+	<ul class="tree">[RESULTS]</ul>
+</div>
+
+</body>
+</html>

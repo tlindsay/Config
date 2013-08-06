@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>function ${1:MyFunction}: ${2:boolean}; 
+begin
+	$0
+end;</string>
+	<key>name</key>
+	<string>function ... end</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>func</string>
+	<key>uuid</key>
+	<string>47CA87E6-D2D7-47D5-AFDB-C5A675BF961F</string>
+</dict>
+</plist>

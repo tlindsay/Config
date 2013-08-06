@@ -1,0 +1,40 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+#alert-background {
+	float: left;
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+	visibility: hidden;
+	position: fixed;
+	margin: 0px;
+}
+
+#alert-message {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#alert-box {
+	font-family: sans-serif;
+	font-size: 9pt;
+	border-color: white;
+	border-style: solid;
+	border-width: 4px;
+	padding: 4px;
+	background-color: rgba(0, 0, 0, 0.85);
+	position: fixed;
+	z-index: 10000000px;
+	font-weight: bold;
+	color: white;
+	width: 400px;
+	height: 100px;
+	cursor: pointer;
+	-webkit-border-radius: 15px;
+	overflow: hidden;
+	-webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2); padding: 5px 5px 5px 15px;
+}

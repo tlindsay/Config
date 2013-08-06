@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	$target = $_ENV["TARGET"];
+	$project = $_ENV["TM_PROJECT_DIRECTORY"];
+
+	// Give PHP version error
+	if (phpversion() &lt; 5.0) die("This bundle requires PHP 5.0 or higher (you have version ".phpversion()." installed).");	
+
+	if (!isset($target)) die("Set the project TARGET before indexing symbols.");
+
+	require_once($_ENV["TM_BUNDLE_SUPPORT"]."/project_search.php");
+?&gt;</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^f</string>
+	<key>name</key>
+	<string>Search Project...</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>DEFEF185-D4D6-492D-B1F3-AA508ACD3934</string>
+</dict>
+</plist>

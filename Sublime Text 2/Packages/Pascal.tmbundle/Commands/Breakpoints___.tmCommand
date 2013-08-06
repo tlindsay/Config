@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	// Give PHP version error
+	if (phpversion() &lt; 5.0) die("This bundle requires PHP 5.0 or higher (you have version ".phpversion()." installed).");	
+
+	if (!isset($_ENV["TARGET"])) die("Set the project TARGET before compiling.");
+
+	require($_ENV["TM_BUNDLE_SUPPORT"]."/breakpoint_viewer.php");
+?&gt;</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^b</string>
+	<key>name</key>
+	<string>Breakpoints...</string>
+	<key>output</key>
+	<string>showAsHTML</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>uuid</key>
+	<string>FD372CA4-8840-4279-95FD-DE46E8B7290D</string>
+</dict>
+</plist>

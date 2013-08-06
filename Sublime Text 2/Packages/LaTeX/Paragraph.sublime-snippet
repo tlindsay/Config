@@ -1,0 +1,7 @@
+<snippet>
+    <content><![CDATA[\paragraph{${1:paragraph name}} 
+	${0:$TM_SELECTED_TEXT}]]></content>
+    <tabTrigger>par</tabTrigger>
+    <scope>text.tex.latex</scope>
+    <description>Paragraph</description>
+</snippet>

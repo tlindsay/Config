@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/sh -
+/usr/bin/osascript &lt;&lt;-EOF
+tell application "Terminal"
+activate
+end tell
+EOF</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^t</string>
+	<key>name</key>
+	<string>Bring Terminal to Front</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>19F431D7-A977-45A5-8C23-7B8E9ACD5F58</string>
+</dict>
+</plist>

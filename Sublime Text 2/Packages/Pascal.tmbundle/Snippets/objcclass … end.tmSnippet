@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>type
+	NS${1:ClassName} = objcclass (${2:NSObject})
+		$0
+	end;</string>
+	<key>name</key>
+	<string>objcclass … end</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>objcclass</string>
+	<key>uuid</key>
+	<string>FE18D020-E3CC-44C6-A6E7-2228D2A33A32</string>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+unit ${1:unit_name};
+
+interface
+
+uses
+	SysUtils${2:, Classes};
+
+implementation
+
+$0
+
+end.
+
+]]></content>
+	<description>unit … implementation … end</description>
+    <tabTrigger>unit</tabTrigger>
+    <scope>source.pascal</scope> 
+</snippet>

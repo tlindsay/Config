@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>for pointer(${1}) in ${2} do
+	begin
+		$0
+	end;</string>
+	<key>name</key>
+	<string>for ... in … end</string>
+	<key>scope</key>
+	<string>source.pascal</string>
+	<key>tabTrigger</key>
+	<string>forin</string>
+	<key>uuid</key>
+	<string>FE08E9D6-3B3B-43C3-8339-3EFAC6E58D04</string>
+</dict>
+</plist>

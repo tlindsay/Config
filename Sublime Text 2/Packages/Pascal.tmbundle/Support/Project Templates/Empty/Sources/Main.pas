@@ -1,0 +1,1 @@
+{$mode objfpc}{$modeswitch objectivec1}program Main;uses	CocoaAll, Strings;var  argc: LongInt;  argv: PPChar;begin	NSApplicationMain(argc, argv);end.

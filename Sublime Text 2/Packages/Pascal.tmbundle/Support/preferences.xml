@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<preferences>
+	<pref>
+		<kind>section</kind>
+		<name>Console</name>
+		<description>Console appearance (for running/building)</description>
+	</pref>
+	<pref>
+		<key>console_font</key>
+		<name>Font</name>
+		<description>The console display font</description>
+		<value>Andale Mono</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>console_font_size</key>
+		<name>Font size</name>
+		<description>The console display font size (in points)</description>
+		<value>9</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>console_style</key>
+		<name>Style</name>
+		<description>The console display style</description>
+		<values>
+			<value>Black on white</value>
+			<value>White on black</value>
+		</values>
+		<value>1</value>
+		<kind>list</kind>
+	</pref>
+	<pref>
+		<kind>section</kind>
+		<name>Documentation</name>
+	</pref>
+	<pref>
+		<key>docset</key>
+		<name>Documentation Docset</name>
+		<description>The docset for the Documentation for Word command</description>
+		<value>/Library/Developer/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<kind>section</kind>
+		<name>iOS</name>
+	</pref>
+	<pref>
+		<key>iphone_sim_app</key>
+		<name>iPhone Simulator.app</name>
+		<value>/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>iphone_sim_support</key>
+		<name>iPhone Simulator Support</name>
+		<value>~/Library/Application Support/iPhone Simulator</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<kind>section</kind>
+		<name>General</name>
+	</pref>
+	<pref>
+		<key>ibtool</key>
+		<name>InterfaceBuilder Utility</name>
+		<description>Path to the ibtool utility</description>
+		<value>/Developer/usr/bin/ibtool</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>xcodebuild</key>
+		<name>Xcode Build Utility</name>
+		<description>Path to the "xcodebuild" utility</description>
+		<value>/Developer/usr/bin/xcodebuild</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>xcode</key>
+		<name>Xcode.app</name>
+		<description>Path to Xcode</description>
+		<value>/Developer/Applications/Xcode.app</value>
+		<kind>field</kind>
+	</pref>
+	<pref>
+		<key>error_hud</key>
+		<name>Error HUD</name>
+		<description>Shows compiler errors in a floating HUD style window</description>
+		<value>on</value>
+		<kind>checkbox</kind>
+	</pref>
+	<pref>
+		<kind>section</kind>
+		<name>Debugging</name>
+	</pref>
+	<pref>
+		<key>gdb_breakpoints</key>
+		<name>GDB Commands</name>
+		<description>Default commands set for all debugging sessions</description>
+		<value>break "+[NSException raise]"
+break objc_exception_throw
+break _NSAutoreleaseNoPool
+break _objc_fatal
+break malloc_error_break
+break CGErrorBreakpoint
+		</value>
+		<kind>textbox</kind>
+	</pref>
+	<pref>
+		<kind>section</kind>
+		<name>Class Browser</name>
+	</pref>
+	<pref>
+		<key>class_browser_filter</key>
+		<name>Class Filter</name>
+		<description>List of classes (PERL regular expressions accepted) to filter in the class browser</description>
+		<value>/^\w+Class$/i</value>
+		<kind>textbox</kind>
+	</pref>
+	<pref>
+		<key>class_browser_pascalclass</key>
+		<name>Pascal Classes</name>
+		<value>on</value>
+		<kind>checkbox</kind>
+	</pref>
+	<pref>
+		<key>class_browser_objcclass</key>
+		<name>Objective C Classes</name>
+		<value>on</value>
+		<kind>checkbox</kind>
+	</pref>
+	<pref>
+		<key>class_browser_objcprotocol</key>
+		<name>Objective C Protocols</name>
+		<value></value>
+		<kind>checkbox</kind>
+	</pref>
+	<pref>
+		<key>class_browser_objccategory</key>
+		<name>Objective C Categories</name>
+		<value></value>
+		<kind>checkbox</kind>
+	</pref>
+	<pref>
+		<key>class_browser_filter_string</key>
+		<value/>
+		<kind>hidden</kind>
+	</pref>
+</preferences>
