@@ -47,7 +47,7 @@ class OpenMacTerminal(sublime_plugin.TextCommand):#pylint: disable-msg=R0903,W02
 
         #add path
         if paths is not None and len(paths) == 1:
-            command.append(paths[0])#pylint: disable-msg=E1101
+            command.append(os.path.dirname(paths[0]))#pylint: disable-msg=E1101
         elif self.view.file_name() is not None:
             command.append(os.path.dirname(self.view.file_name()))#pylint: disable-msg=E1101
         elif self.view.window().active_view().file_name() is not None:
@@ -72,8 +72,8 @@ class OpenMacTerminal(sublime_plugin.TextCommand):#pylint: disable-msg=R0903,W02
             debug_info['err'] = err
             debug_info['terminal_name'] = terminal_name
             debug_info['default_path'] = default_path
-            print "---MacTerminal DEBUG START---"
+            print("---MacTerminal DEBUG START---")
             pprint(debug_info)
-            print "---MacTerminal DEBUG END---"
+            print("---MacTerminal DEBUG END---")
         else:
             subprocess.Popen(command)#pylint: disable-msg=E1101

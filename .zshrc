@@ -60,15 +60,23 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias flush="dscacheutil -flushcache"
 alias ping="ping -c 5"
 alias ll="ls -l"
+alias gall="git add --all"
+alias gcp="git checkout gh-pages"
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 #####################################
 
 # Folder Aliases
 #####################################
+alias school="cd /Users/Pat/Documents/Schoolwork"
 alias javahw="cd /Users/Pat/Documents/Schoolwork/Fall\ \'12/CIS\ 315\ \-\ Java/Homework"
 alias automata="cd /Users/Pat/Documents/Schoolwork/Spring\ \'13/CS\ 421\ —\ Automata"
 alias squirtle="cd /Library/WebServer/Documents/Team\ Squirtle/TeamSquirtle"
 alias olm="cd /Library/WebServer/Documents/OneLessMile"
+alias camp="cd /Users/Pat/Documents/Programming/FLPL\ Programming"
+alias plnotes="cd /Library/WebServer/Documents/CS410-Notes"
+alias langs="cd /Users/Pat/Documents/Schoolwork/Fall\ \'13/CS410W-Programming\ Languages"
+alias hapster="cd /Library/WebServer/Documents/Hapster/Hapster-Web"
+alias billy="cd /Library/WebServer/Documents/br-sandbox"
 #####################################
 
 # Functions
@@ -86,7 +94,7 @@ subl(){
 
 # find - Open file/folder in Finder
 find(){
-	open -a Finder "$@";
+	open -R "$@";
 }
 
 # tree - Display current directory and subdir contents in tree form

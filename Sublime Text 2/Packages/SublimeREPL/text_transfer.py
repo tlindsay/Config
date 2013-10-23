@@ -27,6 +27,14 @@ def sender(external_id,):
     return wrap
 
 
+@sender("coffee")
+def coffee(repl, text, view=None):
+    """
+        use CoffeeScript multiline hack
+        http://coffeescript.org/documentation/docs/repl.html
+    """
+    default_sender(repl, text.replace("\n", u'\uFF00') + "\n", view)
+
 @sender("python")
 def python_sender(repl, text, view=None):
     text_wo_encoding = re.sub(
@@ -107,7 +115,7 @@ class ReplViewWrite(sublime_plugin.TextCommand):
             rv.append_input_text(text)
             break  # send to first repl found
         else:
-            sublime.error_message("Cannot find REPL for '{}'".format(external_id))
+            sublime.error_message("Cannot find REPL for '{0}'".format(external_id))
 
 
 class ReplSend(sublime_plugin.TextCommand):
